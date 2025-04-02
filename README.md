@@ -22,7 +22,7 @@ A real-time dashboard combining weather forecasts, cryptocurrency data, and fina
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/crypto-forecast.git
+   git clone https://github.com/Saheelsutar/crypto-forecast.git
    cd crypto-forecast
    ```
 
