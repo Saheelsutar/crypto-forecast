@@ -1,8 +1,17 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f9fafb;
+  --foreground: #111827;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --navbar-bg: #1e3a8a;
+  --navbar-text: #f3f4f6;
 }
 
 @theme inline {
@@ -14,13 +23,49 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #111827;
+    --foreground: #f9fafb;
+    --primary: #3b82f6;
+    --primary-hover: #60a5fa;
+    --card-bg: #1f2937;
+    --card-border: #374151;
+    --navbar-bg: #0f172a;
+    --navbar-text: #f3f4f6;
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 15, 23, 42; /* slate-950 */
   }
 }
 
+/* Ensure dark mode transitions are smooth */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  color: rgb(var(--foreground-rgb, 0, 0, 0));
+  background-color: rgb(var(--background-rgb, 249, 250, 251)); /* gray-50 */
+  font-family: var(--font-sans);
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Apply transition to common elements */
+button, 
+a, 
+.transition-colors {
+  transition-property: color, background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
