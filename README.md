@@ -8,7 +8,6 @@ A real-time dashboard combining weather forecasts, cryptocurrency data, and fina
 - **Cryptocurrency Tracker**: Monitor top cryptocurrencies with price charts
 - **Interactive Charts**: Visualize temperature and price trends
 - **Favorites**: Save your favorite cities and cryptocurrencies
-- **Dark Mode**: Toggle between light and dark themes
 - **Responsive Design**: Works on desktop and mobile devices
 
 ## Getting Started
@@ -84,7 +83,6 @@ For deployment to Vercel or similar platforms, the build process will be handled
 - **Redux Toolkit**: Centralized state management for predictable data flow
 - **Loading States**: Dedicated loading and error states for robust UI feedback
 - **Data Caching**: Implemented time-based caching to reduce API calls
-- **Dark Mode**: Persisted user preferences using localStorage with SSR compatibility
 
 ### Error Handling
 
